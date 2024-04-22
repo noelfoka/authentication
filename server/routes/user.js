@@ -6,3 +6,5 @@ const router = express.Router();
 router.post('/signup', (req, res) => {
   const { username, email, password } = req.body;
 })
+
+export { router as UserRouter };
