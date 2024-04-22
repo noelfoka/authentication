@@ -1,14 +1,18 @@
 import { useState } from "react";
 import "../App.css";
+import  Axios from "axios";
 
 const [username, setUsername] = useState('');
 const [password, setPassword] = useState('');
 const [email, setEmail] = useState('');
 
+const handleSubmit = (e) => {
+  e.preventDefault();
+}
 const Signup = () => {
   return (
     <div className="sign-up-container">
-      <form className="sign-up-form">
+      <form className="sign-up-form" onSubmit={handleSubmit}>
         <h2>Sign Up</h2>
         <label htmlFor="username">Username: </label>
         <input 
