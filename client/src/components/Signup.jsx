@@ -1,3 +1,5 @@
+import "../App.css";
+
 const Signup = () => {
   return (
     <div className="sign-up-container">
@@ -11,6 +13,8 @@ const Signup = () => {
 
         <label htmlFor="password">Password: </label>
         <input type="password" id="password" autoComplete="off" placeholder="********" />
+
+        <button type="submit">Sign Up</button>
       </form>
     </div>
   )
