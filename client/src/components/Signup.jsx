@@ -2,14 +2,23 @@ import { useState } from "react";
 import "../App.css";
 import  Axios from "axios";
 
-const [username, setUsername] = useState('');
-const [password, setPassword] = useState('');
-const [email, setEmail] = useState('');
-
-const handleSubmit = (e) => {
-  e.preventDefault();
-}
 const Signup = () => {
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
+  const [email, setEmail] = useState('');
+  
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    Axios.post("http://localhost:3000/auth/signup", {
+      username, 
+      password, 
+      email
+    }).then((res) => {
+      console.log(res);
+    }).catch((err) => {
+      console.log(err);
+    })
+  }
   return (
     <div className="sign-up-container">
       <form className="sign-up-form" onSubmit={handleSubmit}>
