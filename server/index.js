@@ -4,6 +4,8 @@ dotenv.config();
 import { UserRouter } from './routes/user';
 
 const app = express();
+app.use(express.json());
+app.use('/auth', UserRouter);
 
 mongoose.connect('mongodb://localhost127.0.0.1:27017/authentication');
 
