@@ -1,6 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 dotenv.config();
+import { UserRouter } from './routes/user';
 
 const app = express();
 
